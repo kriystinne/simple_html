@@ -11,10 +11,88 @@
   <style>
     /* FOR THIS CHALLENGE, WRITE ALL OF YOUR STYLING WITHIN THIS <style> TAG */
     /* PART 1 CSS */
-    
+    header {
+      color: rgb(57,57,57)
+    }
+
+    nav {
+      background-color: rgb(179,193,176);
+    }
+
+    .hero-img {
+      width: 100%;
+    }
+
+    h1 {
+      font-family: arial;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: rgb(232,131,106);
+    }
 
     /* PART 2 CSS*/
 
+    .item {
+      flex-basis: content;
+      margin: 10px;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+      width: 400px;
+      height: 150px;
+      position: relative;
+    }
+
+    .item .text {
+      padding: 20px;
+      font-family: arial;
+      font-size: 18px;
+    }
+
+    .description {
+      font-family: arial;
+      font-size: 13px;
+      text-align: justify;
+      padding: 10px 0px 0px;
+    }
+
+    .price {
+      font-family: arial;
+      font-size: 13px;
+      font-weight: bold;
+      text-align: right;
+      margin-right: 20px;
+      margin-bottom: 5px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .items-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .heading {
+      font-family: arial;
+      font-weight: bold;
+      font-size: 25px;
+      color: rgb(232,131,106);
+      text-align:left;
+    }
+
+    .row {
+      width: 100%;
+    }
+
+    .msection {
+      margin-bottom: 40px;
+      margin-top: 20px;
+    }
+    
 
   </style>
   <!-- END OF CSS -->
@@ -45,7 +123,9 @@
           - Your image should have a width of 100%. 
           - The image you should show lives at this url (https://drive.google.com/uc?export=view&id=1Jz937sGmWecge5XywqMkmqPoFqliUu9z).
       -->
-
+        <img class="hero-img" src="hero-image.jpg" alt="JoeRestaurant">
+        <!--"https://drive.google.com/uc?export=view&id=1Jz937sGmWecge5XywqMkmqPoFqliUu9z">-->
+        
         <div id='greeting'>
           <!-- 
           Below this comment, create a level-one header displaying the restaurant name. This is the main title of the page and should be above the slogan.
@@ -53,17 +133,20 @@
             - The font style should be Arial.
             - Should have a margin bottom of 10 pixels.
           -->
-          
-
+          <h1>
+            Joe's Restaurant
+          </h1>
+      
           <!-- 
           Apply a class name of "highlight" to each <span> tag in the level-five header below.
           For your class name write the styling to change the color of the font from black to rgb(232,131,106).
           -->
-          <h5 id="slogan"><span>Always</span> serving <span>fresh</span> ingredients with a smile.</h5>
+          <h5 id="slogan"><span class="highlight">Always</span> serving <span class="highlight">fresh</span> ingredients with a smile.</h5>
         </div>
         <i class="fas fa-chevron-down"></i>
     </div>
   </header>
+
   <!-- 
     HTML & CSS: PART 2 
     Follow the instructions / requirements presented in the prep course "Projects" tab > "Restaurant Website & Menu" > "Part 2"
@@ -71,6 +154,162 @@
   <main>
     <h2>Menu</h2>
     <!-- Create a restaurant menu here -->
+
+    <!-- appetizers section-->
+    <div class="msection">
+      <div class="row">
+        <h3 class="heading">Appetizers</h3>
+      </div>
+
+      <div class="items-container">
+        <div class="item">
+            <div class="text">
+              <h4>Cranberry Brie Bread</h4>
+              <p class="description">Gooey brie topped with sweet cranberries on a crusty loaf of sourdough</p>
+            </div>
+            <div class="price">$18.00</div>
+        </div>
+     
+        <div class="item">
+          <div class="text">
+            <h4>Korean Beef Lettuce Wraps</h4>
+            <p class="description">Bulgogi beef wrapped in little lettuce packages with homemade pickled onions and radishes, topped with miso mayo </p>
+          </div>
+          <div class="price">$14.00</div>
+        </div>
+
+        <div class="item">
+          <div class="text">
+            <h4>Spinach-Stuffed Mushrooms</h4>
+            <p class="description">Creamy, garlicky, spinach stuffed mushrooms topped with bubbling parmesan cheese </p>
+          </div>
+          <div class="price">$12.00</div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!--Mains section-->
+    <div class="msection">
+      <div class="row">
+        <h3 class="heading">Mains</h3>
+      </div>
+
+      <div class="items-container">
+        <div class="item">
+            <div class="text">
+              <h4>Apple and Onion Pork Chops</h4>
+              <p class="description">Hearty fall flavours served with brussels sprouts with toasted hazelnut butter and an in house made french roll
+              </p>
+            </div>
+            <div class="price">$24.00</div>
+        </div>
+     
+        <div class="item">
+          <div class="text">
+            <h4>Grilled Moroccan Chicken</h4>
+            <p class="description">Fragrant chicken cooked with garlic, lemon, and pomegranate molasses served with roasted turmeric cauliflower topped with creamy yogurt  </p>
+          </div>
+          <div class="price">$26.00</div>
+        </div>
+
+        <div class="item">
+          <div class="text">
+            <h4>Grilled Lobster Tails with Coriander</h4>
+            <p class="description">Fresh and tender lobster tails seasoned with coriander and topped with warm chilli butter sauce  </p>
+          </div>
+          <div class="price">$32.00</div>
+        </div>
+
+        <div class="item">
+          <div class="text">
+            <h4>Dried Tomato Florentine Pasta</h4>
+            <p class="description">spicy pasta cooked in a sun dried tomato cream sauce topped with spinach and mozzarella  </p>
+          </div>
+          <div class="price">$22.00</div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!--Salads section-->
+    <div class="msection">
+      <div class="row">
+        <h3 class="heading">Salads</h3>
+      </div>
+
+      <div class="items-container">
+        <div class="item">
+            <div class="text">
+              <h4>Broccoli and Apple Salad with Chicken</h4>
+              <p class="description">Charred broccoli, sweet fuji apples, feta cheese and warm grilled chicken breast served on a bed of mixed greens</p>
+            </div>
+            <div class="price">$18.00</div>
+        </div>
+     
+        <div class="item">
+          <div class="text">
+            <h4>Persimmon, Pomegranate, and Kale Salad </h4>
+            <p class="description">Massaged seasoned kale salad served with a delicious tangy citrus dressing </p>
+          </div>
+          <div class="price">$14.00</div>
+        </div>
+
+        <div class="item">
+          <div class="text">
+            <h4>Peach, Sweet Corn and Halloumi Salad</h4>
+            <p class="description">Fresh sweet corn and juicy peaches served with salty halloumi cheese on arugula  </p>
+          </div>
+          <div class="price">$22.00</div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!--Desserts section-->
+    <div class="msection">
+      <div class="row">
+        <h3 class="heading">Desserts</h3>
+      </div>
+
+      <div class="items-container">
+        <div class="item">
+            <div class="text">
+              <h4>Salted Caramel White Chocolate Brownies</h4>
+              <p class="description">Decadent gooey white chocolate brownies layered with in house made caramel</p>
+            </div>
+            <div class="price">$12.00</div>
+        </div>
+     
+        <div class="item">
+          <div class="text">
+            <h4>Cinnamon Sugar Pretzel Bites </h4>
+            <p class="description">Warm fried dough covered in cinnamon sugar served with chocolate sauce for dipping </p>
+          </div>
+          <div class="price">$8.00</div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+ 
+
+    <!--DEALS section-->
+    <!-- unordered list, at least 1 element underlined, at least 1 element a different color, all elements must use Box Model correctly-->
+    
+    
+
+
+
+
+
+
+
   </main>
 </body>
 </html>
