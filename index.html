@@ -39,7 +39,7 @@
       margin: 10px;
       border: 1px solid #ccc;
       box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-      width: 400px;
+      width: 310px;
       height: 150px;
       position: relative;
     }
@@ -88,9 +88,55 @@
       width: 100%;
     }
 
+
     .msection {
       margin-bottom: 40px;
       margin-top: 20px;
+    }
+
+    .msection-deals {
+      margin-bottom: 40px;
+      margin-top: 20px;
+      border: 1px dashed rgb(232,131,106);
+      border-radius: 5px;
+    }
+
+    .deals {
+      font-family: arial;
+      font-size: 25px;
+      font-style: bold;
+      color: rgb(232,131,106);
+      margin-bottom: 20px;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .ul-deals {
+      margin-left:30%;
+    }
+
+    .ul-deals li{
+      font-family: arial;
+      font-weight: 700;
+      list-style-position: inside;
+      padding: 5px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    li.a {
+      text-decoration: underline;
+      color: red;
+      font-weight:bolder;
+    }
+
+    .highlight-deal {
+      font-style: italic;
+    }
+
+    .offer {
+      font-weight: 400;
+      font-style: italic;
     }
     
 
@@ -301,7 +347,19 @@
 
     <!--DEALS section-->
     <!-- unordered list, at least 1 element underlined, at least 1 element a different color, all elements must use Box Model correctly-->
-    
+    <div class="msection-deals">
+      <div class="row">
+        <h3 class="deals">Deals</h3>
+      </div>
+        <ul class="ul-deals">
+          <li>Monday: <span class="offer">$3 off vegetarian salads and mains </span></li>
+          <li>Tuesday: <span class="offer">$2 off bar rail </span></li>
+          <li>Wednesday: <span class="offer">half-priced appetizers after 9pm</span></li>
+          <li class="a">Thursday: <span class="highlight-deal">$2 off cocktails</span></li>
+          <li>Friday: <span class="offer">one free dessert with the purchase 2 mains</span></li>
+        </ul>
+
+    </div>
     
 
 
