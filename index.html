@@ -118,8 +118,10 @@
       text-align: center;
     }
 
-    .ul-deals {
-      margin-left:30%;
+    .div-deals {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
     }
 
     .ul-deals li{
@@ -129,10 +131,10 @@
       padding: 5px;
       text-align: left;
       margin-bottom: 20px;
-      list-style: none;
+      list-style: none;   
     }
 
-    li::before {
+    .ul-deals li::before {
       content: "4"; font-family:"Webdings";
       color: rgb(232,131,106);
     }
@@ -179,8 +181,10 @@
           - Your image should have a width of 100%. 
           - The image you should show lives at this url (https://drive.google.com/uc?export=view&id=1Jz937sGmWecge5XywqMkmqPoFqliUu9z).
       -->
+
+      <!-- WHILE DEVELOPING, I USED THE LOCAL SRC FOR THE IMAGE, PLEASE SEE THE COMMENT BELOW FOR ADDING THE SOURCE FROM GOOGLE DRIVE-->
         <img class="hero-img" src="hero-image.jpg" alt="JoeRestaurant">
-        <!--"https://drive.google.com/uc?export=view&id=1Jz937sGmWecge5XywqMkmqPoFqliUu9z">-->
+        <!--src="https://drive.google.com/uc?export=view&id=1Jz937sGmWecge5XywqMkmqPoFqliUu9z">-->
         
         <div id='greeting'>
           <!-- 
@@ -361,13 +365,15 @@
       <div class="row">
         <h3 class="deals">Deals</h3>
       </div>
-        <ul class="ul-deals">
-          <li>Monday: <span class="offer">$3 off vegetarian salads and mains </span></li>
-          <li>Tuesday: <span class="offer">$2 off bar rail </span></li>
-          <li>Wednesday: <span class="offer">half-priced appetizers after 9pm</span></li>
-          <li>Thursday: <span class="offer">$2 off cocktails</span></li>
-          <li>Friday: <span class="offer">one free dessert with the purchase 2 mains</span></li>
-        </ul>
+        <div class="div-deals">
+          <ul class="ul-deals">
+            <li>Monday: <span class="offer">$3 off vegetarian salads and mains </span></li>
+            <li>Tuesday: <span class="offer">$2 off bar rail </span></li>
+            <li>Wednesday: <span class="offer">half-priced appetizers after 9pm</span></li>
+            <li>Thursday: <span class="offer">$2 off cocktails</span></li>
+            <li>Friday: <span class="offer">one free dessert with the purchase 2 mains</span></li>
+          </ul>
+      </div>
 
     </div>
     
