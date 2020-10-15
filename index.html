@@ -99,8 +99,15 @@
       margin-top: 20px;
       border: 1px dashed rgb(232,131,106);
       border-radius: 5px;
+      animation-name: tackyexample;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
     }
 
+    @keyframes tackyexample {
+      from {background-color: gainsboro;}
+      to {background-color: rgb(179,193,176);}
+    }
     .deals {
       font-family: arial;
       font-size: 25px;
@@ -122,13 +129,14 @@
       padding: 5px;
       text-align: left;
       margin-bottom: 20px;
+      list-style: none;
     }
 
-    li.a {
-      text-decoration: underline;
-      color: red;
-      font-weight:bolder;
+    li::before {
+      content: "4"; font-family:"Webdings";
+      color: rgb(232,131,106);
     }
+
 
     .highlight-deal {
       font-style: italic;
@@ -137,6 +145,8 @@
     .offer {
       font-weight: 400;
       font-style: italic;
+      color: rgb(232,131,106);
+      text-decoration: underline;
     }
     
 
@@ -355,7 +365,7 @@
           <li>Monday: <span class="offer">$3 off vegetarian salads and mains </span></li>
           <li>Tuesday: <span class="offer">$2 off bar rail </span></li>
           <li>Wednesday: <span class="offer">half-priced appetizers after 9pm</span></li>
-          <li class="a">Thursday: <span class="highlight-deal">$2 off cocktails</span></li>
+          <li>Thursday: <span class="offer">$2 off cocktails</span></li>
           <li>Friday: <span class="offer">one free dessert with the purchase 2 mains</span></li>
         </ul>
 
